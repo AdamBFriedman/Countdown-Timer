@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time remaining until San Francisco</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table class="countdownContainer">
+	<tr class="info">
+		<td colspan="4">Time remaining until <span class="fam">Rosalia</span>, <span class="fam">Roxanne</span>, and <span class="fam">Joey</span> come to <span id="sf">San Francisco</span>!</td>
+	</tr>
+	<tr class="info">
+		<td id="days">120</td>
+		<td id="hours">4</td>
+		<td id="minutes">12</td>
+		<td id="seconds">22</td>
+	</tr>
+	<tr class="bottomText">
+		<td>Days</td>
+		<td>Hours</td>
+		<td>Minutes</td>
+		<td>Seconds</td>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+	
+console.log('working')
+
+function countdown() {
+	let now = new Date();
+	let eventDate = new Date(2019, 7, 18);
+
+	let currentTime = now.getTime();
+	let eventTime = eventDate.getTime();
+
+	let remTime = eventTime - currentTime;
+
+	let sec = Math.floor(remTime / 1000);
+	let min = Math.floor(sec / 60);
+	let hour = Math.floor(min / 60);
+	let day = Math.floor(hour / 24);
+
+	hour %= 24;
+	min %= 60;
+	sec %= 60;
+
+	hour = (hour < 10) ? "0" + hour : hour;
+	min = (min < 10) ? "0" + min : min;
+	sec = (sec < 10) ? "0" + sec : sec;
+
+
+document.getElementById("days").textContent = day;
+document.getElementById("days").innerText = day;
+
+document.getElementById("hours").textContent = hour;
+document.getElementById("hours").innerText = hour;
+
+document.getElementById("minutes").textContent = min;
+document.getElementById("minutes").innerText = min;
+
+document.getElementById("seconds").textContent = sec;
+document.getElementById("seconds").innerText = sec;
+
+setTimeout(countdown, 1000);
+}
+
+countdown();
+</script>
+</body>
+</html>

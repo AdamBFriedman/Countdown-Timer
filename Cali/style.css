@@ -1,0 +1,48 @@
+body {
+	background-image: url('family.jpg');
+}
+
+.countdownContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-132%);
+	text-align: center;
+    background-image: url("sf.jpg");
+    background-position: 0px -150px;
+	border: 1px solid #000;
+	padding: 10px;
+    box-shadow: 0 0 5px 3px #BA9B37;
+}
+
+.info {
+	font-size: 80px;
+	color: #d10f00;
+	text-shadow: 1px 0 0 #ffc904;
+}
+
+.fam {
+    color: #ffc904;
+    text-shadow: 1px 0 0 #d10f00;
+}
+
+.bottomText {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#days, #hours, #minutes, #seconds {
+	color: #ffc904;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+body {
+    background-image: url('family.jpg');
+    background-position: cover;
+}
+}
